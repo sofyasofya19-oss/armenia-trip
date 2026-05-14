@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width,initial-scale=1">
+<title>Армения — 6,5 дней</title>
+<style>
+:root {
+  --bg: #f5f5f0;
+  --card: #fff;
+  --card2: #f8f8f5;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #c2410c;
+  --accent-light: #fff7ed;
+  --link: #1d4ed8;
+  --green: #15803d;
+  --green-bg: #f0fdf4;
+  --purple: #7c3aed;
+  --purple-bg: #f5f3ff;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --orange: #c2410c;
+  --orange-bg: #fff7ed;
+  --border: #e5e5e0;
+  --shadow: 0 1px 3px rgba(0,0,0,.06),
+            0 4px 12px rgba(0,0,0,.04);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,.08);
+  --radius: 14px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('photos/khorvirap4.jpg')
+    center/cover no-repeat;
+  opacity: .12;
+  z-index: -1;
+  pointer-events: none;
+}
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+/* --- Header --- */
+.header {
+  text-align: center;
+  margin-bottom: 36px;
+  padding: 40px 20px 32px;
+}
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.header .sub {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* --- Section titles --- */
+h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 48px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  color: var(--text);
+  letter-spacing: -.3px;
+}
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 18px 0 8px;
+  color: var(--text);
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+}
+.day-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: .78rem;
+  padding: 3px 14px;
+  border-radius: 20px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.day-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.day-intro {
+  color: var(--muted);
+  font-size: .92rem;
+  margin-bottom: 16px;
+}
+
+/* --- Options --- */
+.option {
+  background: var(--card2);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 12px 0;
+  border-left: 4px solid var(--accent);
+}
+.option-tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: .78rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 6px;
+}
+.option p {
+  font-size: .93rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+.option p:last-child { margin-bottom: 0; }
+
+/* --- Details block inside options --- */
+.details {
+  margin-top: 10px;
+  font-size: .88rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.details li {
+  margin-bottom: 4px;
+  list-style: none;
+  padding-left: 18px;
+  position: relative;
+}
+.details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* --- Evening block --- */
+.evening {
+  background: linear-gradient(
+    135deg, #fef3c7 0%, #fff7ed 100%
+  );
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0 4px;
+  border: 1px solid #fde68a;
+}
+.evening-title {
+  font-weight: 700;
+  font-size: .85rem;
+  color: #92400e;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  margin-bottom: 8px;
+}
+.evening p {
+  font-size: .9rem;
+  color: #78350f;
+  margin-bottom: 6px;
+}
+.evening p:last-child { margin-bottom: 0; }
+.evening a { color: #b45309; }
+
+/* --- Carousel --- */
+.carousel {
+  position: relative;
+  margin: 14px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+.carousel-track {
+  display: flex;
+  transition: transform .35s ease;
+}
+.carousel-track img {
+  min-width: 100%;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.85);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  transition: background .2s;
+}
+.carousel-btn:hover { background: #fff; }
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+.carousel-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.5);
+  transition: background .2s;
+}
+.carousel-dots span.active {
+  background: #fff;
+}
+.carousel-counter {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  font-size: .75rem;
+  padding: 2px 10px;
+  border-radius: 12px;
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  .carousel-track img { height: 250px; }
+  .carousel-btn { width: 32px; height: 32px;
+    font-size: 1rem; }
+}
+
+/* --- Simple grid gallery (for small sets) --- */
+.gallery {
+  display: grid;
+  gap: 6px;
+  margin: 14px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gallery.g2 { grid-template-columns: 1fr 1fr; }
+.gallery.g3 { grid-template-columns: 1fr 1fr 1fr; }
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: filter .2s;
+}
+.gallery img:hover { filter: brightness(1.05); }
+@media (max-width: 600px) {
+  .gallery.g3 { grid-template-columns: 1fr 1fr; }
+  .gallery img { height: 140px; }
+}
+
+/* --- Lightbox --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,.85);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox.active { display: flex; }
+.lightbox img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: .7;
+  transition: opacity .2s;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+.lightbox-close:hover { opacity: 1; }
+
+/* --- Badges --- */
+.badge {
+  display: inline-block;
+  font-size: .73rem;
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.badge-free {
+  background: var(--green-bg);
+  color: var(--green);
+}
+.badge-price {
+  background: var(--orange-bg);
+  color: var(--orange);
+}
+.badge-rating {
+  background: var(--purple-bg);
+  color: var(--purple);
+}
+
+/* --- Tables --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 20px;
+  font-size: .88rem;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+th {
+  background: var(--card2);
+  color: var(--muted);
+  text-align: left;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  border-bottom: 2px solid var(--border);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: #444;
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafaf7; }
+
+/* --- Info block --- */
+.info {
+  background: var(--blue-bg);
+  border-left: 4px solid var(--blue);
+  padding: 14px 20px;
+  border-radius: 0 10px 10px 0;
+  margin: 16px 0;
+}
+.info p {
+  margin: 4px 0;
+  color: #1e3a5f;
+  font-size: .9rem;
+}
+
+/* --- Price line --- */
+.price-line {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: .9rem;
+  margin: 10px 0;
+}
+
+/* --- Links --- */
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { margin-bottom: 8px; font-size: .93rem; }
+
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: .8rem;
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+</style>
+</head>
+<body>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <button class="lightbox-close"
+          onclick="closeLb()">&times;</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<div class="wrap">
+
+<div class="header">
+  <h1>Армения — 6,5 дней</h1>
+  <p class="sub">
+    Ереван и окрестности &bull; 6 человек &bull;
+    Курс: 100 AMD &asymp; 20 руб
+  </p>
+</div>
+
+<div class="info">
+  <p><strong>Квартира:</strong>
+    <a href="https://yandex.com/maps/?text=Gevorg+Jahukyan+225+Yerevan&z=16"
+       target="_blank">ул. Геворг Джаукян, 225</a>
+    – район Айгестан, центр Кентрон.
+    До Каскада ~10 мин, до площади Республики ~15 мин
+    пешком.</p>
+</div>
+
+<!-- ========== РАСПИСАНИЕ ========== -->
+<h2>Расписание по дням</h2>
+
+<!-- ДЕНЬ 1 -->
+<div class="card">
+  <span class="day-tag">День 1</span>
+  <div class="day-title">Прилёт, акклиматизация</div>
+  <p class="day-intro">
+    После перелёта и тяжёлых тренировок –
+    не перегружаемся. Гуляем по городу, привыкаем
+    к жаре, едим, пьём вино.
+  </p>
+
+  <div class="option">
+    <div class="option-tag">Опция А</div>
+    <p><a href="https://yandex.com/maps/org/cascade_complex/127047933904/"
+          target="_blank"><strong>Каскад</strong></a>
+      + площадь Республики
+      <span class="badge badge-free">бесплатно</span></p>
+    <p>Каскад – монументальная лестница из белого
+      туфа с несколькими ярусами смотровых площадок.
+      Внутри работают эскалаторы, можно не подниматься
+      пешком. С верхних точек открывается панорама
+      на весь город и Арарат. Рядом – скульптуры
+      Ботеро и Каталано.</p>
+    <ul class="details">
+      <li>Маршрут: Каскад → Оперный театр → Лебединое
+        озеро → Северный проспект → площадь
+        Республики</li>
+      <li>По вечерам на площади Республики работают
+        поющие фонтаны (обычно 20:00–21:00)</li>
+      <li>Время: ~2–3 часа на прогулку</li>
+      <li>Всё бесплатно, расходы только на кофе/мороженое</li>
+    </ul>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel-track">
+      <img src="photos/cascade.jpg"
+           alt="Каскад, вид снизу"
+           onclick="openLb(this)">
+      <img src="photos/cascade2.jpg"
+           alt="Каскад, ступени и скульптуры"
+           onclick="openLb(this)">
+      <img src="photos/cascade3.jpg"
+           alt="Вид с Каскада на Ереван"
+           onclick="openLb(this)">
+      <img src="photos/cascade4.jpg"
+           alt="Монумент у Каскада"
+           onclick="openLb(this)">
+      <img src="photos/cascade5.jpg"
+           alt="Каскад вечером"
+           onclick="openLb(this)">
+    </div>
+    <button class="carousel-btn prev"
+            onclick="slide(this,-1)">&#8249;</button>
+    <button class="carousel-btn next"
+            onclick="slide(this,1)">&#8250;</button>
+    <div class="carousel-dots"></div>
+    <div class="carousel-counter"></div>
+  </div>
+
+  <div class="option">
+    <div class="option-tag">Опция Б</div>
+    <p><strong>Район Конд</strong> +
+      <a href="https://yandex.com/maps/?text=Saryan+street+Yerevan&z=16"
+         target="_blank">ул. Сарян</a>
+      <span class="badge badge-free">бесплатно</span></p>
+    <p>Конд – старейший жилой район Еревана. Узкие
+      каменные улочки, деревянные балконы, застройке
+      несколько сотен лет. Контраст с современным
+      городом. Прогулка ~40 мин, потом спускаетесь
+      на Сарян к винным барам.</p>
+    <ul class="details">
+      <li>Конд безопасен, но улицы крутые – обувь
+        на плоской подошве</li>
+      <li>Лучшее время: предзакатное, когда
+        мягкий свет</li>
+    </ul>
+  </div>
+
+  <div class="gallery g2">
+    <img src="photos/kond.jpg"
+         alt="Район Конд" onclick="openLb(this)">
+    <img src="photos/kond2.jpg"
+         alt="Конд, старые улочки"
+         onclick="openLb(this)">
+  </div>
+
+  <div class="evening">
+    <div class="evening-title">Ужин и вечер</div>
+    <p><strong>Вариант А:</strong> Винные бары на
+      <a href="https://yandex.com/maps/?text=Saryan+street+Yerevan&z=16"
+         target="_blank">ул. Сарян</a> –
+      начните с
+      <a href="https://yandex.com/maps/org/in_vino/29629976987/"
+         target="_blank">In Vino</a> (бокал 200–500 руб),
+      дальше по настроению:
+      <a href="https://yandex.com/maps/org/wine_republic/1775593735/"
+         target="_blank">Wine Republic</a>,
+      <a href="https://yandex.com/maps/?text=Voskevaz+Wine+Time+Saryan+Yerevan&z=17"
+         target="_blank">Voskevaz</a>.
+      Перекусить тапасами в
+      <a href="https://yandex.com/maps/org/tapastan/115967886417/"
+         target="_blank">Tapastan</a>
+      (600–1 000 руб/чел).</p>
+    <p><strong>Вариант Б:</strong> Ужин в
+      <a href="https://yandex.com/maps/org/seasons_restaurant/126315737507/"
+         target="_blank">Seasons Cafe</a>
+      (600–1 200 руб, терраса, итальянская кухня)
+      или
+      <a href="https://yandex.com/maps/org/gustav/101055128839/"
+         target="_blank">Gustav</a>
+      (бургеры, сковородки, у Каскада).</p>
+  </div>
+</div>
+
+<!-- ДЕНЬ 2 -->
+<div class="card">
+  <span class="day-tag">День 2</span>
+  <div class="day-title">
+    Гарни + Симфония камней + Гегард
+  </div>
+  <p class="day-intro">
+    Три точки по одной дороге, полдня. Самая
+    классическая и при этом реально впечатляющая
+    поездка из Еревана. Лучше выехать с утра
+    (9:00–10:00), чтобы не стоять под дневным солнцем.
+  </p>
+
+  <div class="option">
+    <div class="option-tag">Маршрут</div>
+    <p><a href="https://yandex.com/maps/org/temple_of_garni/46870097691/"
+          target="_blank"><strong>Храм Гарни</strong></a>
+      (30 км от Еревана) – единственный сохранившийся
+      языческий храм в Армении и на всём Кавказе.
+      Построен в I веке н.э. Стоит на краю ущелья
+      реки Азат – виды невероятные.
+      <span class="badge badge-price">вход 300 руб</span>
+    </p>
+    <ul class="details">
+      <li>На территории продают лаваш, который
+        пекут в тонире прямо при вас – 50–100 руб</li>
+      <li>Осмотр: 30–40 мин</li>
+    </ul>
+
+    <p style="margin-top:12px">
+      <a href="https://yandex.com/maps/org/symphony_of_stones/120181199618/"
+         target="_blank"><strong>Симфония камней</strong></a>
+      – природные базальтовые колонны, похожие
+      на органные трубы. Спуск по тропе ~15–20 мин.
+      Внизу – река, можно искупаться.
+      <span class="badge badge-price">вход 60 руб</span>
+    </p>
+
+    <p style="margin-top:12px">
+      <a href="https://yandex.com/maps/?text=Geghard+monastery+Armenia&z=14"
+         target="_blank"><strong>Монастырь Гегард</strong></a>
+      (40 км) – частично высечен в скале, XIII век.
+      Объект ЮНЕСКО. Потрясающая акустика внутри
+      (монахи иногда поют). Ощущение, что попал
+      в «Властелин колец».
+      <span class="badge badge-free">бесплатно</span>
+    </p>
+    <ul class="details">
+      <li>У Гегарда продают чурчхелу, суджук,
+        гату (сладкий пирог) – 60–200 руб</li>
+    </ul>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel-track">
+      <img src="photos/garni.jpg"
+           alt="Храм Гарни" onclick="openLb(this)">
+      <img src="photos/garni5.jpg"
+           alt="Гарни, колоннада"
+           onclick="openLb(this)">
+      <img src="photos/garni2.jpg"
+           alt="Ущелье Гарни"
+           onclick="openLb(this)">
+      <img src="photos/symphony.jpg"
+           alt="Симфония камней"
+           onclick="openLb(this)">
+      <img src="photos/symphony4.jpg"
+           alt="Базальтовые колонны"
+           onclick="openLb(this)">
+      <img src="photos/geghard.jpg"
+           alt="Монастырь Гегард"
+           onclick="openLb(this)">
+      <img src="photos/geghard4.jpg"
+           alt="Гегард, общий вид"
+           onclick="openLb(this)">
+    </div>
+    <button class="carousel-btn prev"
+            onclick="slide(this,-1)">&#8249;</button>
+    <button class="carousel-btn next"
+            onclick="slide(this,1)">&#8250;</button>
+    <div class="carousel-dots"></div>
+    <div class="carousel-counter"></div>
+  </div>
+
+  <div class="info">
+    <p><strong>Как добраться:</strong></p>
+    <p><strong>Такси</strong> (GG/Yandex Go):
+      2 000–2 800 руб на машину туда-обратно.
+      Водитель ждёт у каждой точки.</p>
+    <p><strong>Тур с гидом:</strong>
+      1 200–2 000 руб/чел (GetYourGuide, Viator,
+      местные агентства на Абовяна). Обычно 6–8 часов,
+      входные включены. Удобно, но нет свободы
+      темпа.</p>
+    <p><strong>Совет:</strong> берите такси на весь день
+      и договоритесь с водителем заранее – он покажет
+      лучшие точки для фото и подождёт.</p>
+  </div>
+
+  <div class="evening">
+    <div class="evening-title">Ужин и вечер</div>
+    <p><strong>Вариант А:</strong>
+      <a href="https://yandex.com/maps/org/dargett_brewpub/58004970035/"
+         target="_blank">Dargett Brewpub</a>
+      (Арам, 72) – своя крафтовая пивоварня,
+      терраса, бургеры и мясные блюда.
+      Пиво 200–400 руб, еда 600–1 000 руб/чел.</p>
+    <p><strong>Вариант Б:</strong>
+      <a href="https://yandex.com/maps/?text=MUHA+bar+Baghramyan+Yerevan&z=16"
+         target="_blank">MUHA</a>
+      (Баграмяна, 9/59) – панк-рок-бар с живыми
+      концертами и авторскими настойками. Пиво
+      от 100 руб. Тусовка местных музыкантов
+      и креативщиков.</p>
+  </div>
+</div>
+
+<!-- ДЕНЬ 3 -->
+<div class="card">
+  <span class="day-tag">День 3</span>
+  <div class="day-title">Озеро Севан + Дилижан</div>
+  <p class="day-intro">
+    Выезд на весь день. Севан – «жемчужина Армении»
+    на высоте 1 900 м. Можно ограничиться Севаном
+    или продолжить до Дилижана.
+  </p>
+
+  <div class="option">
+    <div class="option-tag">Опция А – Озеро Севан</div>
+    <p><a href="https://yandex.com/maps/?text=Sevanavank+monastery&z=14"
+          target="_blank"><strong>Монастырь
+      Севанаванк</strong></a>
+      (IX век) на полуострове – две церкви
+      на скалистом холме с видом на всё озеро.
+      Подъём 5 минут, панорама на 360°.
+      Озеро Севан – на высоте 1 900 м, бирюзовая
+      вода, горы вокруг.
+      <span class="badge badge-free">бесплатно</span></p>
+    <ul class="details">
+      <li>Маршрутка от Северного автовокзала:
+        ~300 руб, 1,5 ч. Такси: 2 000–2 400 руб
+        в одну сторону (на 6 чел – минивэн)</li>
+      <li><strong>Купание:</strong> можно, пляжный
+        сезон с 1 июля. Вода +18–22°. Есть
+        5 бесплатных общественных пляжей
+        с раздевалками, навесами и душем</li>
+      <li><strong>Еда:</strong> у Севанаванка
+        десятки кафе с террасами на воде.
+        Обязательно – рыба ишхан (форель),
+        запечённая целиком с травами: 400–800 руб.
+        Раки, хоровац. Хороший вариант –
+        Tarsus Sevan (4.8) или Lavash Restaurant</li>
+      <li>Каяки, виндсёрфинг, катамараны – на пляжах.
+        Аренда каяка ~400–600 руб/час</li>
+      <li>Совет: возьмите полотенца и купальники,
+        наверху прохладнее чем в Ереване</li>
+    </ul>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel-track">
+      <img src="photos/sevanavank_new.jpg"
+           alt="Монастырь Севанаванк"
+           onclick="openLb(this)">
+      <img src="photos/sevan_beach.jpg"
+           alt="Севан, панорама"
+           onclick="openLb(this)">
+      <img src="photos/sevan4.jpg"
+           alt="Севанаванк с озера"
+           onclick="openLb(this)">
+      <img src="photos/sevan6.jpg"
+           alt="Озеро Севан, берег"
+           onclick="openLb(this)">
+      <img src="photos/sevan3.jpg"
+           alt="Севан, панорама озера"
+           onclick="openLb(this)">
+      <img src="photos/sevan2.jpg"
+           alt="Севан, вид на горы"
+           onclick="openLb(this)">
+    </div>
+    <button class="carousel-btn prev"
+            onclick="slide(this,-1)">&#8249;</button>
+    <button class="carousel-btn next"
+            onclick="slide(this,1)">&#8250;</button>
+    <div class="carousel-dots"></div>
+    <div class="carousel-counter"></div>
+  </div>
+
+  <div class="option">
+    <div class="option-tag">
+      Опция Б – Севан + Дилижан + Агарцин
+    </div>
+    <p>Дилижан – город в лесу, «маленькая Швейцария».
+      <a href="https://yandex.com/maps/?text=Haghartsin+monastery+Armenia&z=14"
+         target="_blank"><strong>Монастырь
+        Агарцин</strong></a> (X–XIII вв.) спрятан
+      в лесу в 18 км от города – полная тишина
+      и невероятная архитектура. В старом городе
+      Дилижана – мастерские, керамика, кафе.</p>
+    <ul class="details">
+      <li>Такси Ереван → Дилижан: 2 000–2 400 руб
+        (1,5 часа). По дороге – Севан</li>
+      <li>Тур на целый день (Севан + Дилижан +
+        Агарцин): 2 500–4 000 руб/чел</li>
+      <li>Совет: если на такси, попросите водителя
+        заехать в Агарцин (18 км от Дилижана
+        по лесной дороге)</li>
+    </ul>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel-track">
+      <img src="photos/dilijan.jpg"
+           alt="Монастырь Агарцин"
+           onclick="openLb(this)">
+      <img src="photos/dilijan3.jpg"
+           alt="Агарцин осенью"
+           onclick="openLb(this)">
+      <img src="photos/dilijan6.jpg"
+           alt="Агарцин, церковь"
+           onclick="openLb(this)">
+      <img src="photos/dilijan4.jpg"
+           alt="Дилижан, природа"
+           onclick="openLb(this)">
+      <img src="photos/dilijan5.jpg"
+           alt="Агарцин в лесу"
+           onclick="openLb(this)">
+      <img src="photos/dilijan2.jpg"
+           alt="Дилижан, город"
+           onclick="openLb(this)">
+    </div>
+    <button class="carousel-btn prev"
+            onclick="slide(this,-1)">&#8249;</button>
+    <button class="carousel-btn next"
+            onclick="slide(this,1)">&#8250;</button>
+    <div class="carousel-dots"></div>
+    <div class="carousel-counter"></div>
+  </div>
+
+  <div class="evening">
+    <div class="evening-title">Ужин и вечер</div>
+    <p><strong>Вариант А:</strong>
+      <a href="https://yandex.com/maps/?text=Camilla+restaurant+Yerevan&z=16"
+         target="_blank">Camilla</a>
+      (нью-йоркский стиль, бранчи, коктейли,
+      400–800 руб/чел) – расслабленная атмосфера
+      после длинного дня.</p>
+    <p><strong>Вариант Б:</strong>
+      <a href="https://yandex.com/maps/org/green_room/240883958148/"
+         target="_blank">Green Room</a>
+      (Туманяна, 31/3) – караоке, стендап-вечера,
+      спортивные трансляции. Пиво 200–300 руб.
+      Или
+      <a href="https://yandex.com/maps/?text=COBA+club+Yerevan+Isahakyan&z=16"
+         target="_blank">COBA</a>
+      (Исаакяна, 42) – лаунж + клуб,
+      коктейли 500–800 руб.</p>
+  </div>
+</div>
+
+<!-- ДЕНЬ 4 -->
+<div class="card">
+  <span class="day-tag">День 4</span>
+  <div class="day-title">Винодельня Арени / Хор Вирап</div>
+  <p class="day-intro">
+    Оба места на одной дороге к югу от Еревана.
+    Можно совместить за день или выбрать одно.
+  </p>
+
+  <div class="option">
+    <div class="option-tag">Опция А – Винодельня Арени</div>
+    <p><a href="https://yandex.com/maps/?text=Areni+wine+village+Armenia&z=13"
+          target="_blank"><strong>Арени</strong></a>
+      – центр армянского виноделия, сорт Арени
+      Нуар (аналог пино нуара). В селе несколько
+      виноделен: Areni Wine Factory (самая большая),
+      Hin Areni (бутиковая), Old Bridge.
+      Рядом –
+      <a href="https://yandex.com/maps/?text=Areni-1+cave+Armenia&z=14"
+         target="_blank">пещера Арени-1</a>,
+      где нашли древнейший в мире ботинок (5 500 лет)
+      и винодельческий пресс.
+      <span class="badge badge-price">
+        дегустация 200–500 руб
+      </span></p>
+    <ul class="details">
+      <li>Расстояние: 120 км, ~1,5 часа</li>
+      <li>Дегустация: 3–5 вин, иногда с сыром
+        и фруктами</li>
+      <li><strong>Совет:</strong> организованный тур
+        удобнее, потому что за руль нельзя.
+        GetYourGuide/Viator: 2 000–3 000 руб/чел
+        (Хор Вирап + Арени + Нораванк).
+        Или возьмите такси на весь день:
+        5 000–7 000 руб на машину</li>
+      <li>В Арени есть обед: шашлык + салат –
+        300–600 руб/чел</li>
+    </ul>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel-track">
+      <img src="photos/areni2.jpg"
+           alt="Виноградники Арени"
+           onclick="openLb(this)">
+      <img src="photos/areni6.jpg"
+           alt="Монастырь Нораванк"
+           onclick="openLb(this)">
+      <img src="photos/areni.jpg"
+           alt="Пещера Арени-1"
+           onclick="openLb(this)">
+      <img src="photos/areni4.jpg"
+           alt="Вход в пещеру Арени"
+           onclick="openLb(this)">
+      <img src="photos/areni3.jpg"
+           alt="Вид из пещеры на ущелье"
+           onclick="openLb(this)">
+    </div>
+    <button class="carousel-btn prev"
+            onclick="slide(this,-1)">&#8249;</button>
+    <button class="carousel-btn next"
+            onclick="slide(this,1)">&#8250;</button>
+    <div class="carousel-dots"></div>
+    <div class="carousel-counter"></div>
+  </div>
+
+  <div class="option">
+    <div class="option-tag">Опция Б – Хор Вирап</div>
+    <p><a href="https://yandex.com/maps/org/khor_virap/25909174877/"
+          target="_blank"><strong>Хор Вирап</strong></a>
+      (43 км) – монастырь у подножия Арарата.
+      Открыточный вид, который вы видели на каждой
+      второй фотке Армении. Можно спуститься
+      в подземелье, где по легенде 13 лет сидел
+      Григорий Просветитель.
+      <span class="badge badge-free">бесплатно</span></p>
+    <ul class="details">
+      <li>Лучше на рассвете или закате –
+        Арарат подсвечивается</li>
+      <li>Такси: 1 200–1 600 руб в одну сторону</li>
+      <li>Осмотр: 40–60 мин</li>
+      <li>Комбо-тур (Хор Вирап + Арени + Нораванк):
+        2 000–3 000 руб/чел</li>
+    </ul>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel-track">
+      <img src="photos/khorvirap.jpg"
+           alt="Хор Вирап и Арарат"
+           onclick="openLb(this)">
+      <img src="photos/khorvirap4.jpg"
+           alt="Хор Вирап, открытка"
+           onclick="openLb(this)">
+      <img src="photos/khorvirap5.jpg"
+           alt="Хор Вирап, монастырь"
+           onclick="openLb(this)">
+      <img src="photos/khorvirap3.jpg"
+           alt="Хор Вирап, стены"
+           onclick="openLb(this)">
+      <img src="photos/khorvirap2.jpg"
+           alt="Дорога к Хор Вирап"
+           onclick="openLb(this)">
+    </div>
+    <button class="carousel-btn prev"
+            onclick="slide(this,-1)">&#8249;</button>
+    <button class="carousel-btn next"
+            onclick="slide(this,1)">&#8250;</button>
+    <div class="carousel-dots"></div>
+    <div class="carousel-counter"></div>
+  </div>
+
+  <div class="evening">
+    <div class="evening-title">Ужин и вечер</div>
+    <p><strong>Вариант А:</strong>
+      <a href="https://yandex.com/maps/?text=Aperitivo+cafe+Yerevan+Cascade&z=16"
+         target="_blank">Aperitivo</a>
+      (у Каскада, итальянская кухня, 500–1 000 руб).
+      Утром скидка 50% – но вечером тоже отлично:
+      паста, вино, терраса.</p>
+    <p><strong>Вариант Б:</strong>
+      <a href="https://yandex.com/maps/org/pablo_yerevan/238988681897/"
+         target="_blank">Pablo</a>
+      (Абовяна, 3/1) – живой джаз, японско-латиноамериканская
+      кухня, креативные коктейли, танцы.
+      Публика – местные креативщики и экспаты.</p>
+  </div>
+</div>
+
+<!-- ДЕНЬ 5 -->
+<div class="card">
+  <span class="day-tag">День 5</span>
+  <div class="day-title">Скалодром / Цахкадзор</div>
+  <p class="day-intro">
+    Активный день – на выбор: лазание в городе
+    или горы с канатной дорогой.
+  </p>
+
+  <div class="option">
+    <div class="option-tag">
+      Опция А – Скалодром Ver Var
+    </div>
+    <p><a href="https://yandex.com/maps/?text=Ver+Var+climbing+Yerevan&z=16"
+          target="_blank"><strong>Ver Var</strong></a>
+      (ул. Хоренаци, 28) – скалодром с боулдерингом
+      и верхней страховкой. Стены разной сложности,
+      подходит и новичкам, и опытным. Максимум
+      6 человек на пробное занятие – для вашей
+      компании идеально.
+      <span class="badge badge-price">
+        600 руб/чел (пробное 1,5 ч)
+      </span></p>
+    <ul class="details">
+      <li>Пробное занятие: 1,5 часа, инструктор +
+        вся снаряга включена</li>
+      <li>Дневной абонемент: 800 руб</li>
+      <li>Прокат скальников: 160 руб</li>
+      <li>Время работы: Пн-Пт 15:00–23:00,
+        Сб-Вс 12:00–21:00</li>
+      <li>Бронировать пробное занятие лучше
+        заранее через Instagram @vervar.am</li>
+      <li>Рядом –
+        <a href="https://yandex.com/maps/org/gum/12136247275/"
+           target="_blank">ГУМ рынок</a>
+        (2 мин пешком), зайдите после</li>
+    </ul>
+  </div>
+
+  <div class="gallery g2">
+    <img src="photos/vervar.jpg"
+         alt="Скалодром Ver Var"
+         onclick="openLb(this)">
+    <img src="photos/gum_inside.jpg"
+         alt="Скалодром, интерьер"
+         onclick="openLb(this)">
+  </div>
+
+  <div class="option">
+    <div class="option-tag">
+      Опция Б – Цахкадзор (канатка + хайкинг)
+    </div>
+    <p><a href="https://yandex.com/maps/org/tsaghkadzor/1766012632/"
+          target="_blank"><strong>Цахкадзор</strong></a>
+      (50 км от Еревана) – горнолыжный курорт,
+      летом – хайкинг. Канатная дорога поднимает
+      на 2 800 м за ~30 мин (3 очереди).
+      Наверху – альпийские луга, потрясающие виды.
+      На обратном пути – монастырь Кечарис (XI–XIII вв.).
+      <span class="badge badge-price">
+        канатка от 600 руб
+      </span></p>
+    <ul class="details">
+      <li>Такси: 1 500–2 000 руб в одну сторону
+        (~40 мин). На 6 человек – минивэн
+        3 000–4 000 руб туда-обратно</li>
+      <li>Канатка работает с 10:00 до 17:00</li>
+      <li>Наверху прохладно (+10–15°),
+        возьмите ветровку</li>
+      <li>Хайкинг: 1–3 часа в зависимости
+        от маршрута</li>
+      <li>В городке Цахкадзор есть кафе:
+        обед 300–600 руб/чел</li>
+      <li>Тур не нужен – такси + канатка,
+        всё просто</li>
+    </ul>
+  </div>
+
+  <div class="carousel" data-carousel>
+    <div class="carousel-track">
+      <img src="photos/tsaghkadzor_summer.jpg"
+           alt="Цахкадзор, летняя панорама"
+           onclick="openLb(this)">
+      <img src="photos/tsaghkadzor_lift.jpg"
+           alt="Канатная дорога"
+           onclick="openLb(this)">
+      <img src="photos/tsakh3.jpg"
+           alt="Цахкадзор, лесные тропы"
+           onclick="openLb(this)">
+      <img src="photos/tsakh4.jpg"
+           alt="Цахкадзор, горный пейзаж"
+           onclick="openLb(this)">
+      <img src="photos/tsakh6.jpg"
+           alt="Монастырь Кечарис"
+           onclick="openLb(this)">
+    </div>
+    <button class="carousel-btn prev"
+            onclick="slide(this,-1)">&#8249;</button>
+    <button class="carousel-btn next"
+            onclick="slide(this,1)">&#8250;</button>
+    <div class="carousel-dots"></div>
+    <div class="carousel-counter"></div>
+  </div>
+
+  <div class="evening">
+    <div class="evening-title">Ужин и вечер</div>
+    <p><strong>Вариант А:</strong>
+      <a href="https://yandex.com/maps/org/calumet/73212229732/"
+         target="_blank">Calumet</a>
+      (Пушкина, 56/1) – живая музыка каждый вечер,
+      рок, этника. Пиво от 160 руб. Лучше прийти
+      к 21:00, чтобы занять место.</p>
+    <p><strong>Вариант Б:</strong>
+      <a href="https://yandex.com/maps/?text=Fry+Day+cafe+Yerevan&z=16"
+         target="_blank">Fry Day</a>
+      (большие порции, 600–1 000 руб) –
+      расслабленный ужин после активного дня.</p>
+  </div>
+</div>
+
+<!-- ДЕНЬ 6 -->
+<div class="card">
+  <span class="day-tag">День 6</span>
+  <div class="day-title">
+    ГУМ рынок + Вернисаж + готовка
+  </div>
+  <p class="day-intro">
+    Последний полный день. Закупаемся, гуляем,
+    готовим прощальный ужин дома.
+  </p>
+
+  <div class="option">
+    <div class="option-tag">Утро – ГУМ рынок</div>
+    <p><a href="https://yandex.com/maps/org/gum/12136247275/"
+          target="_blank"><strong>ГУМ рынок</strong></a>
+      (ул. Хоренаци, 35) – главный крытый рынок
+      Еревана с 1952 года. Суджук, бастурма, чечил,
+      специи, сухофрукты, чурчхела, лаваш, свежие
+      сыры, мотал. Всё можно (и нужно) пробовать
+      бесплатно – продавцы сами предлагают.
+      <span class="badge badge-price">
+        чек 100–400 руб
+      </span></p>
+    <ul class="details">
+      <li>Часы работы: 7:30–17:00 (выходной –
+        понедельник)</li>
+      <li>Берите наличку (драмы) – карты не везде</li>
+      <li>Что купить домой: суджук, бастурма,
+        специи, сушёные фрукты</li>
+      <li>Совет: зайдите до 10:00, пока не жарко
+        и нет толп</li>
+    </ul>
+  </div>
+
+  <div class="gallery g2">
+    <img src="photos/gum.jpg"
+         alt="ГУМ рынок, сухофрукты"
+         onclick="openLb(this)">
+    <img src="photos/gum_inside.jpg"
+         alt="ГУМ рынок, фрукты внутри"
+         onclick="openLb(this)">
+  </div>
+
+  <div class="option">
+    <div class="option-tag">День – Вернисаж</div>
+    <p><a href="https://yandex.com/maps/org/vernissage_market/75348646136/"
+          target="_blank"><strong>Вернисаж</strong></a>
+      – блошиный рынок у площади Республики.
+      Ковры ручной работы, нарды, антикварное
+      серебро, советский винтаж, керамика,
+      музыкальные инструменты, картины.
+      <span class="badge badge-free">
+        вход бесплатно
+      </span></p>
+    <ul class="details">
+      <li>Лучший день: воскресенье (максимальный
+        выбор)</li>
+      <li>Часы: 10:00–18:00 (сб-вс до 19:00)</li>
+      <li>Торгуйтесь – цену можно сбить
+        на 20–40%</li>
+      <li>Берите наличку в драмах</li>
+      <li>Хорошие сувениры: нарды (от 2 000 руб),
+        серебро (от 500 руб), ковры (от 5 000 руб)</li>
+    </ul>
+  </div>
+
+  <div class="gallery g3">
+    <img src="photos/vernissage.jpg"
+         alt="Вернисаж" onclick="openLb(this)">
+    <img src="photos/vernissage2.jpg"
+         alt="Вернисаж, антиквариат"
+         onclick="openLb(this)">
+    <img src="photos/vernissage3.jpg"
+         alt="Вернисаж, торговые ряды"
+         onclick="openLb(this)">
+  </div>
+
+  <div class="evening">
+    <div class="evening-title">
+      Прощальный ужин
+    </div>
+    <p><strong>Вариант А – готовка дома:</strong>
+      с утра на ГУМе покупаете лаваш, 2–3 вида
+      сыра (чечил, мотал), бастурму, зелень, суджук,
+      сухофрукты, вино. Вечером собираете армянский
+      стол дома. Бюджет на компанию:
+      1 500–3 000 руб.</p>
+    <p><strong>Вариант Б – ресторан:</strong>
+      <a href="https://yandex.com/maps/org/tapastan/115967886417/"
+         target="_blank">Tapastan</a>
+      (Сарян, тапас + вино, 600–1 000 руб/чел)
+      или
+      <a href="https://yandex.com/maps/org/gustav/101055128839/"
+         target="_blank">Gustav</a>
+      (бургеры, коктейли, 600–1 200 руб/чел).
+      После – финальный бар из проверенных
+      за неделю.</p>
+  </div>
+</div>
+
+<!-- ДЕНЬ 7 -->
+<div class="card">
+  <span class="day-tag">День 7</span>
+  <div class="day-title">Утро, вылет (рейс в 15:00)</div>
+  <p class="day-intro">
+    Завтрак → сбор → аэропорт.
+  </p>
+  <p>Завтрак рядом с домом (список ниже).
+    Аэропорт Звартноц – 30 мин на такси, выезжайте
+    к 12:00–12:30.</p>
+  <p class="price-line">
+    Такси в аэропорт: 600–800 руб на машину.</p>
+</div>
+
+<!-- ========== ЗАВТРАКИ ========== -->
+<h2>Завтраки для компании</h2>
+
+<div class="info">
+  <p>Квартира на Джаукяна 225 – район Айгестан,
+    тихий и жилой. Прямо рядом полноценных кафе
+    нет, но на такси за 100–150 руб (3–5 мин) –
+    отличные завтраки с большими столами.</p>
+</div>
+
+<h3>Такси 3–5 мин (100–150 руб) –
+  сесть вшестером, кофе + лёгкая еда</h3>
+<table>
+<tr>
+  <th>Место</th><th>Чек/чел (руб)</th>
+  <th>Рейтинг</th><th>Что там</th>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/work_space/9879825995/"
+       target="_blank">Work Space</a>
+  </td>
+  <td>300–600</td>
+  <td><span class="badge badge-rating">5.0</span></td>
+  <td>Пушкина, 60. Просторный зал с диванами,
+    большие столы. Панкейки 180, авокадо-тост 600,
+    сырники 580, Английский завтрак 900.
+    Спешалти-кофе. С 8:00</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/lumen_coffee_1936/70588770365/"
+       target="_blank">Lumen Coffee 1936</a>
+  </td>
+  <td>200–500</td>
+  <td><span class="badge badge-rating">5.0</span></td>
+  <td>Маштоца, 45. Историческое здание 1936 г.
+    с росписью на стенах. Спешалти-кофе, выпечка,
+    лёгкие блюда. Коворкинг-зона. С 8:30</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/crumbs/120549321861/"
+       target="_blank">Crumbs</a>
+  </td>
+  <td>200–500</td>
+  <td><span class="badge badge-rating">4.9</span></td>
+  <td>Маштоца, 37. Круассаны (120), тост-круассаны,
+    блинчики с джемом, сэндвичи. 89% хвалят
+    завтрак. С 8:00</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/paul_armenia/209546981995/"
+       target="_blank">Paul</a>
+  </td>
+  <td>200–600</td>
+  <td><span class="badge badge-rating">5.0</span></td>
+  <td>Абовяна, 8. Французская пекарня-ресторан,
+    6 филиалов. Круассан 180, омлет 440,
+    корзина выпечки. С 8:00</td>
+</tr>
+</table>
+
+<h3>Поздний бранч (рядом с домом, 3 мин пешком)</h3>
+<table>
+<tr>
+  <th>Место</th><th>Чек/чел (руб)</th>
+  <th>Рейтинг</th><th>Что там</th>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=Charentsi+28+restaurant+Yerevan&z=17"
+       target="_blank">Charentsi 28</a>
+  </td>
+  <td>600–1 200</td>
+  <td><span class="badge badge-rating">4.5</span></td>
+  <td>Чаренца, 28 (~3 мин пешком). Терраса в саду
+    старого дома, большие столы. Армянская +
+    средиземноморская. <strong>С 11:00</strong> –
+    бранч перед дневной поездкой</td>
+</tr>
+</table>
+
+<div class="info">
+  <p><strong>Совет:</strong> Утром вызывайте такси
+    до Work Space или Lumen Coffee (100 руб, 3 мин) –
+    там есть большие столы, где вшестером
+    расчилитесь с кофе и тостами. Если встаёте
+    поздно – Charentsi 28 в трёх минутах пешком,
+    с террасой и полноценной едой с 11:00.</p>
+</div>
+
+<!-- ========== РЕСТОРАНЫ ========== -->
+<h2>Рестораны и кафе</h2>
+<table>
+<tr>
+  <th>Место</th><th>Чек (руб)</th>
+  <th>Кухня</th><th>Что надо знать</th>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=Camilla+restaurant+Yerevan&z=16"
+       target="_blank">Camilla</a>
+  </td>
+  <td>400–800</td>
+  <td>Нью-йоркский</td>
+  <td>Бранчи, панкейки, тосты, коктейли</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/tapastan/115967886417/"
+       target="_blank">Tapastan</a>
+  </td>
+  <td>600–1 000</td>
+  <td>Тапас + армянская</td>
+  <td>Бастурма карпаччо, вино по бокалам. Ул. Сарян</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=Aperitivo+cafe+Yerevan+Cascade&z=16"
+       target="_blank">Aperitivo</a>
+  </td>
+  <td>500–1 000</td>
+  <td>Итальянская</td>
+  <td>50% скидка утром. Паста, вино. У Каскада</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=Fry+Day+cafe+Yerevan&z=16"
+       target="_blank">Fry Day</a>
+  </td>
+  <td>600–1 000</td>
+  <td>Европейская</td>
+  <td>Большие порции, расслабленная атмосфера</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/gustav/101055128839/"
+       target="_blank">Gustav</a>
+  </td>
+  <td>600–1 200</td>
+  <td>Франц. бистро</td>
+  <td>Бургеры, сковородки, коктейли. У Каскада</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/seasons_restaurant/126315737507/"
+       target="_blank">Seasons Cafe</a>
+  </td>
+  <td>600–1 200</td>
+  <td>Итальянская</td>
+  <td>Терраса, лаунж вечером. Маштоца, 15/5</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/gum/12136247275/"
+       target="_blank">ГУМ рынок</a>
+  </td>
+  <td>100–400</td>
+  <td>Армянская</td>
+  <td>Суджук, бастурма, лаваш. Хоренаци, 35</td>
+</tr>
+</table>
+
+<!-- ========== ВИННЫЕ БАРЫ ========== -->
+<h2>Винные бары – ул. Сарян</h2>
+<p style="color:var(--muted);font-size:.9rem;
+  margin-bottom:12px">
+  Все в ряд на одной улице. Идёте и заходите
+  по настроению. Бокал вина 200–500 руб.
+</p>
+<table>
+<tr>
+  <th>Место</th><th>Цены (руб)</th>
+  <th>Что надо знать</th>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/in_vino/29629976987/"
+       target="_blank">In Vino</a>
+  </td>
+  <td>бокал 200–500</td>
+  <td>Первый бар на Сарян (2012). 800+ вин
+    <span class="badge badge-rating">5.0</span></td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/wine_republic/1775593735/"
+       target="_blank">Wine Republic</a>
+  </td>
+  <td>бокал от 300</td>
+  <td>Терраса, хорошо для компании
+    <span class="badge badge-rating">5.0</span></td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=Voskevaz+Wine+Time+Saryan+Yerevan&z=17"
+       target="_blank">Voskevaz Wine Time</a>
+  </td>
+  <td>бокал от 200</td>
+  <td>Камерно. Терраса на 2-м этаже. Сарян, 8</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=Enoteca+Saryan+Yerevan&z=17"
+       target="_blank">Enoteca</a>
+  </td>
+  <td>сет 600–1 000</td>
+  <td>Дегустационные сеты с сомелье + сыры</td>
+</tr>
+</table>
+
+<!-- ========== БАРЫ ========== -->
+<h2>Молодёжные бары и клубы</h2>
+<p style="color:var(--muted);font-size:.9rem;
+  margin-bottom:12px">
+  Ночная жизнь начинается поздно – до 22:00 пусто,
+  все приходят ближе к полуночи. Бары до 2:00–3:00,
+  клубы до 5:00–6:00. Дресс-код: кроссовки +
+  тёмные джинсы = ок.
+</p>
+<table>
+<tr>
+  <th>Место</th><th>Адрес</th>
+  <th>Цены (руб)</th><th>Что надо знать</th>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/calumet/73212229732/"
+       target="_blank">Calumet</a>
+  </td>
+  <td>Пушкина, 56/1</td>
+  <td>пиво от 160</td>
+  <td>Живые группы, этника, танцы
+    <span class="badge badge-rating">4.7</span></td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/green_room/240883958148/"
+       target="_blank">Green Room</a>
+  </td>
+  <td>Туманяна, 31/3</td>
+  <td>пиво 200–300</td>
+  <td>Караоке, стендап, спорт
+    <span class="badge badge-rating">4.7</span></td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/dargett_brewpub/58004970035/"
+       target="_blank">Dargett Brewpub</a>
+  </td>
+  <td>Арам, 72</td>
+  <td>пиво 200–400</td>
+  <td>Своя крафтовая пивоварня. Терраса
+    <span class="badge badge-rating">5.0</span></td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=Banderego+cocktail+bar+Yerevan&z=16"
+       target="_blank">Banderego</a>
+  </td>
+  <td>Центр</td>
+  <td>коктейли от 500</td>
+  <td>Тематические коктейли «стран мира»</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=COBA+lounge+club+Yerevan+Isahakyan&z=16"
+       target="_blank">COBA</a>
+  </td>
+  <td>Исаакяна, 42</td>
+  <td>коктейли 500–800</td>
+  <td>Клуб + лаунж. Шоу, DJ. 20:00–02:00</td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/?text=MUHA+bar+Baghramyan+Yerevan&z=16"
+       target="_blank">MUHA</a>
+  </td>
+  <td>Баграмяна, 9/59</td>
+  <td>пиво от 100</td>
+  <td>Панк-рок, настойки, живые концерты.
+    Своя тусовка
+    <span class="badge badge-rating">4.6</span></td>
+</tr>
+<tr>
+  <td>
+    <a href="https://yandex.com/maps/org/pablo_yerevan/238988681897/"
+       target="_blank">Pablo</a>
+  </td>
+  <td>Абовяна, 3/1</td>
+  <td>коктейли от 500</td>
+  <td>Живой джаз, Nikkei-кухня, танцы.
+    Креативная тусовка
+    <span class="badge badge-rating">5.0</span></td>
+</tr>
+</table>
+
+<!-- ========== ПОЛЕЗНОЕ ========== -->
+<h2>Полезное</h2>
+<div class="info">
+  <p><strong>Курс:</strong>
+    100 AMD &asymp; 20 руб (ЦБ РФ, май 2026).
+    1 USD &asymp; 390 AMD.</p>
+  <p><strong>Еда:</strong>
+    Завтрак 200–600 руб. Ужин 600–1 200 руб/чел.
+    Пиво: 160–400 руб. Коктейль: 500–900 руб.</p>
+  <p><strong>Такси:</strong>
+    GG Taxi или Yandex Go. По городу: 160–400 руб.
+    За город на день: 3 000–7 000 руб на машину.</p>
+  <p><strong>Связь:</strong>
+    Проще всего – eSIM
+    <a href="https://unisim.net/country/esim-armenia"
+       target="_blank">Unisim</a>
+    ($2.24/ГБ, ~200 руб/ГБ, сеть Viva/MTS, 4G).
+    Установить до вылета, активируется мгновенно.
+    Либо физическая SIM Ucom или Viva в аэропорту
+    (500–1 000 руб за 5 ГБ).</p>
+  <p><strong>После баров:</strong>
+    хоровац (шашлык) у уличных продавцов
+    на Саят-Нова и Абовяна. Круглосуточные хашные.</p>
+</div>
+
+<div class="footer">
+  Армения 2026 &bull;
+  Курс 100 AMD &asymp; 20 руб &bull;
+  Все ссылки ведут на Яндекс.Карты
+</div>
+
+</div>
+
+<script>
+function openLb(el) {
+  var lb = document.getElementById('lb');
+  var img = document.getElementById('lb-img');
+  img.src = el.src;
+  img.alt = el.alt;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb() {
+  var lb = document.getElementById('lb');
+  lb.classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLb();
+});
+
+function slide(btn, dir) {
+  var c = btn.closest('[data-carousel]');
+  var idx = parseInt(c.dataset.idx || '0');
+  var imgs = c.querySelectorAll(
+    '.carousel-track img');
+  idx += dir;
+  if (idx < 0) idx = imgs.length - 1;
+  if (idx >= imgs.length) idx = 0;
+  c.dataset.idx = idx;
+  c.querySelector('.carousel-track')
+    .style.transform =
+      'translateX(-' + (idx * 100) + '%)';
+  updDots(c, idx);
+}
+
+function updDots(c, idx) {
+  var dots = c.querySelectorAll(
+    '.carousel-dots span');
+  dots.forEach(function(d, i) {
+    d.className = i === idx ? 'active' : '';
+  });
+  var cnt = c.querySelector('.carousel-counter');
+  var total = c.querySelectorAll(
+    '.carousel-track img').length;
+  if (cnt) cnt.textContent =
+    (idx + 1) + ' / ' + total;
+}
+
+document.addEventListener('DOMContentLoaded',
+  function() {
+  document.querySelectorAll('[data-carousel]')
+    .forEach(function(c) {
+    var imgs = c.querySelectorAll(
+      '.carousel-track img');
+    var dotsBox = c.querySelector(
+      '.carousel-dots');
+    for (var i = 0; i < imgs.length; i++) {
+      var s = document.createElement('span');
+      if (i === 0) s.className = 'active';
+      dotsBox.appendChild(s);
+    }
+    c.dataset.idx = '0';
+    updDots(c, 0);
+
+    var startX = 0;
+    c.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+    }, {passive: true});
+    c.addEventListener('touchend', function(e) {
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) {
+        slide(c.querySelector('.carousel-btn'),
+          dx < 0 ? 1 : -1);
+      }
+    }, {passive: true});
+  });
+});
+</script>
+</body>
+</html>

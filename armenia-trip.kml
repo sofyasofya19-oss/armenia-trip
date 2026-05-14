@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Армения 6,5 дней</name>
+  <description>Карта поездки: достопримечательности, бары, рестораны, завтраки, активности</description>
+
+  <Style id="home">
+    <IconStyle>
+      <color>ff4c4ce7</color>
+      <scale>1.4</scale>
+      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon>
+    </IconStyle>
+  </Style>
+  <Style id="sight">
+    <IconStyle>
+      <color>ff129ff3</color>
+      <scale>1.2</scale>
+      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/orange-blank.png</href></Icon>
+    </IconStyle>
+  </Style>
+  <Style id="food">
+    <IconStyle>
+      <color>ff2ecc71</color>
+      <scale>1.1</scale>
+      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href></Icon>
+    </IconStyle>
+  </Style>
+  <Style id="bar">
+    <IconStyle>
+      <color>ffb659b6</color>
+      <scale>1.1</scale>
+      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/purple-blank.png</href></Icon>
+    </IconStyle>
+  </Style>
+  <Style id="breakfast">
+    <IconStyle>
+      <color>ffdb9834</color>
+      <scale>1.1</scale>
+      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href></Icon>
+    </IconStyle>
+  </Style>
+  <Style id="activity">
+    <IconStyle>
+      <color>ff227ee6</color>
+      <scale>1.1</scale>
+      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-blank.png</href></Icon>
+    </IconStyle>
+  </Style>
+
+  <!-- ============ КВАРТИРА ============ -->
+  <Folder>
+    <name>Квартира</name>
+    <Placemark>
+      <name>🏠 Наша квартира</name>
+      <description>Геворг Джаукян, 225. Район Айгестан, Кентрон.</description>
+      <styleUrl>#home</styleUrl>
+      <!-- Интерполяция по 2GIS: между домами 197 и 237 -->
+      <Point><coordinates>44.5292,40.1787,0</coordinates></Point>
+    </Placemark>
+  </Folder>
+
+  <!-- ============ ДОСТОПРИМЕЧАТЕЛЬНОСТИ ============ -->
+  <Folder>
+    <name>Достопримечательности</name>
+
+    <Placemark>
+      <name>⛪ Храм Гарни – 300 руб</name>
+      <description>Вход 1 500 AMD ≈ 300 руб. Языческий храм I в. н.э. 30 км от Еревана.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- Wikipedia verified -->
+      <Point><coordinates>44.7303,40.1124,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🪨 Симфония камней – 60 руб</name>
+      <description>Вход 300 AMD ≈ 60 руб. Базальтовые колонны в ущелье Азат.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- В ущелье рядом с Гарни -->
+      <Point><coordinates>44.7250,40.1135,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>⛪ Монастырь Гегард – бесплатно</name>
+      <description>Бесплатно. Высечен в скале, XIII в., ЮНЕСКО. 40 км.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- Wikipedia: 40°08′30″N 44°49′07″E -->
+      <Point><coordinates>44.8186,40.1417,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>⛪ Хор Вирап – бесплатно</name>
+      <description>Бесплатно. Такси 1 200–1 600 руб. Монастырь у Арарата. 43 км.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- Wikipedia verified -->
+      <Point><coordinates>44.5761,39.8783,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>⛪ Севанаванк – бесплатно</name>
+      <description>Бесплатно. Маршрутка 300 руб. Монастырь IX в. на Севане. 65 км.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- Wikipedia verified -->
+      <Point><coordinates>44.9396,40.5619,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🌲 Дилижан – бесплатно</name>
+      <description>Бесплатно. Такси 2 000–2 400 руб. «Маленькая Швейцария» + Агарцин. 100 км.</description>
+      <styleUrl>#sight</styleUrl>
+      <Point><coordinates>44.8501,40.7417,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍷 Винодельня Арени – дегустация 200–500 руб</name>
+      <description>Дегустация 200–500 руб. Вино + пещера Арени-1. 120 км.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- Wikipedia: 39°43′25″N 45°10′47″E -->
+      <Point><coordinates>45.1797,39.7236,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🏛 Каскад – бесплатно</name>
+      <description>Бесплатно. Смотровые площадки, вид на Арарат.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- Wikipedia: 40.19111, 44.51556 -->
+      <Point><coordinates>44.5156,40.1911,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🏘 Район Конд – бесплатно</name>
+      <description>Бесплатно. Старейший район Еревана, каменные улочки.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- Wikipedia: 40.1822, 44.5017 -->
+      <Point><coordinates>44.5017,40.1822,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🛒 ГУМ рынок – 100–400 руб</name>
+      <description>Чек 100–400 руб. Суджук, бастурма, специи. Хоренаци, 35. 7:30–17:00.</description>
+      <styleUrl>#sight</styleUrl>
+      <!-- 2markers.com verified: 40.16752, 44.51468 -->
+      <Point><coordinates>44.5147,40.1675,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+  <!-- ============ РЕСТОРАНЫ ============ -->
+  <Folder>
+    <name>Рестораны</name>
+
+    <Placemark>
+      <name>🍽 Camilla – 400–800 руб</name>
+      <description>Чек 400–800 руб. Нью-йоркский стиль. Пушкина, 40.</description>
+      <styleUrl>#food</styleUrl>
+      <!-- 2GIS: 40.182931, 44.512642 -->
+      <Point><coordinates>44.5126,40.1829,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍽 Fry Day – 600–1 000 руб</name>
+      <description>Чек 600–1 000 руб. Европейская кухня. Комитаса, 58/12 (не центр!).</description>
+      <styleUrl>#food</styleUrl>
+      <!-- fryday.am verified: 40.2062, 44.5198 -->
+      <Point><coordinates>44.5198,40.2062,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍽 Seasons Cafe – 600–1 200 руб</name>
+      <description>Чек 600–1 200 руб. Пицца, паста, терраса. Маштоца, 15/5.</description>
+      <styleUrl>#food</styleUrl>
+      <!-- Yandex Maps: 40.182521, 44.508603 -->
+      <Point><coordinates>44.5086,40.1825,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍽 Tapastan – 600–1 000 руб</name>
+      <description>Чек 600–1 000 руб. Тапас + армянская. Сарян, 6.</description>
+      <styleUrl>#food</styleUrl>
+      <!-- Yandex Maps: 40.187006, 44.508765 -->
+      <Point><coordinates>44.5088,40.1870,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍽 Gustav – 600–1 200 руб</name>
+      <description>Чек 600–1 200 руб. Франц. бистро. Исаакяна, 38.</description>
+      <styleUrl>#food</styleUrl>
+      <!-- Yandex/triplira: 40.189536, 44.516352 -->
+      <Point><coordinates>44.5164,40.1895,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍽 Aperitivo – 500–1 000 руб</name>
+      <description>Чек 500–1 000 руб. Итальянская. Таманяна, 1/3 (у Каскада).</description>
+      <styleUrl>#food</styleUrl>
+      <!-- Yandex Maps: 40.189045, 44.514927 -->
+      <Point><coordinates>44.5149,40.1890,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+  <!-- ============ ЗАВТРАКИ ============ -->
+  <Folder>
+    <name>Завтраки</name>
+
+    <Placemark>
+      <name>☕ Charentsi 28 – 600–1 200 руб (3 мин)</name>
+      <description>Рейтинг 4.5. Армянская + средиземноморская. Терраса. С 11:00 (бранч).</description>
+      <styleUrl>#breakfast</styleUrl>
+      <!-- Чаренца 28, ~40.177, 44.527 -->
+      <Point><coordinates>44.5270,40.1770,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>☕ Work Space – 300–600 руб (такси 3 мин)</name>
+      <description>Рейтинг 5.0. Большие столы, диваны. Панкейки, тосты, кофе. Пушкина, 60. С 8:00.</description>
+      <styleUrl>#breakfast</styleUrl>
+      <!-- Yandex: ~40.184, 44.511 -->
+      <Point><coordinates>44.5110,40.1840,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>☕ Lumen Coffee 1936 – 200–500 руб</name>
+      <description>Рейтинг 5.0. Спешалти-кофе, историческое здание. Маштоца, 45. С 8:30.</description>
+      <styleUrl>#breakfast</styleUrl>
+      <!-- Yandex: ~40.187, 44.513 -->
+      <Point><coordinates>44.5130,40.1870,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>☕ Crumbs – 200–500 руб</name>
+      <description>Рейтинг 4.9. Круассаны, тосты, кофе. Маштоца, 37. С 8:00.</description>
+      <styleUrl>#breakfast</styleUrl>
+      <!-- 2GIS: 40.186158, 44.513508 -->
+      <Point><coordinates>44.5135,40.1862,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>☕ Paul – 200–600 руб</name>
+      <description>Рейтинг 5.0. Французская пекарня. Абовяна, 8. С 8:00.</description>
+      <styleUrl>#breakfast</styleUrl>
+      <!-- Yandex: 40.180426, 44.515277 -->
+      <Point><coordinates>44.5153,40.1804,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+  <!-- ============ ВИННЫЕ БАРЫ – САРЯН ============ -->
+  <Folder>
+    <name>Винные бары – ул. Сарян</name>
+
+    <Placemark>
+      <name>🍷 In Vino – бокал 200–500 руб</name>
+      <description>800+ вин, рейтинг 5.0. Пионер винной улицы. Сарян, 6.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- Yandex: 40.187006, 44.508765 -->
+      <Point><coordinates>44.5088,40.1870,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍷 Wine Republic – бокал от 300 руб</name>
+      <description>Терраса, хорошо для компании. Рейтинг 5.0. Сарян.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- Рядом с In Vino, чуть южнее -->
+      <Point><coordinates>44.5085,40.1867,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍷 Voskevaz Wine Time – бокал от 200 руб</name>
+      <description>Камерно, терраса на 2-м этаже. Сарян, 8.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- Сарян 8, чуть дальше от In Vino -->
+      <Point><coordinates>44.5090,40.1873,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍷 Enoteca – сет 600–1 000 руб</name>
+      <description>Дегустационные сеты с сомелье + сыры. Сарян.</description>
+      <styleUrl>#bar</styleUrl>
+      <Point><coordinates>44.5092,40.1876,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+  <!-- ============ БАРЫ И КЛУБЫ ============ -->
+  <Folder>
+    <name>Бары и клубы</name>
+
+    <Placemark>
+      <name>🎵 Calumet – пиво от 160 руб</name>
+      <description>Живые группы, этника, танцы. Рейтинг 4.7. Пушкина, 56.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- Yandex: 40.185035, 44.509717 -->
+      <Point><coordinates>44.5097,40.1850,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🎤 Green Room – пиво 200–300 руб</name>
+      <description>Караоке, стендап, спорт. Рейтинг 4.7. Туманяна, 31/3.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- Tumanyan 31, центр -->
+      <Point><coordinates>44.5110,40.1867,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🎶 COBA – коктейли 500–800 руб</name>
+      <description>Клуб + лаунж, шоу, DJ. 20:00–02:00. Исаакяна, 42.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- Исаакяна 42, рядом с 46 (2GIS: 44.514028,40.189576) -->
+      <Point><coordinates>44.5143,40.1893,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍸 Banderego – коктейли от 500 руб</name>
+      <description>Тематические коктейли стран мира. Алек Манукяна, 12/6.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- 2GIS: 40.175066, 44.521984 -->
+      <Point><coordinates>44.5220,40.1751,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🍺 Dargett – пиво 200–400 руб</name>
+      <description>Своя пивоварня, терраса. Рейтинг 5.0. Арам, 72.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- Untappd: 40.1836014, 44.5080986 -->
+      <Point><coordinates>44.5081,40.1836,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🎸 MUHA – пиво от 100 руб</name>
+      <description>Панк-рок-бар. Концерты, настойки, тусовка музыкантов. Рейтинг 4.6. Баграмяна, 9/59.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- wte.am: 40.189348, 44.512766 -->
+      <Point><coordinates>44.5128,40.1893,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🎷 Pablo – коктейли от 500 руб</name>
+      <description>Джаз, Nikkei-кухня, танцы. Рейтинг 5.0. Абовяна, 3/1.</description>
+      <styleUrl>#bar</styleUrl>
+      <!-- wte.am: ~40.1813, 44.5157 -->
+      <Point><coordinates>44.5157,40.1813,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+  <!-- ============ АКТИВНОСТИ ============ -->
+  <Folder>
+    <name>Активности</name>
+
+    <Placemark>
+      <name>🧗 Ver Var – 600–1 000 руб</name>
+      <description>Боулдеринг, скалолазание. Пробное 1,5 ч с инструктором. Хоренаци, 28.</description>
+      <styleUrl>#activity</styleUrl>
+      <!-- Yandex verified: 40.171764, 44.511846 -->
+      <Point><coordinates>44.5118,40.1718,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🏄 Flow House – 2 000–3 200 руб</name>
+      <description>Сёрфинг на волнах. Инструктор. Пирумяннери, 5.</description>
+      <styleUrl>#activity</styleUrl>
+      <!-- Yandex: 40.220722, 44.494634 -->
+      <Point><coordinates>44.4946,40.2207,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>⛷ Цахкадзор канатка + хайкинг – от 600 руб</name>
+      <description>Канатка на 2 800 м. Горные тропы. Монастырь Кечарис. 50 км. Такси 1 500–2 000 руб.</description>
+      <styleUrl>#activity</styleUrl>
+      <!-- Wikipedia: 40.53333, 44.72056 -->
+      <Point><coordinates>44.7206,40.5333,0</coordinates></Point>
+    </Placemark>
+
+    <Placemark>
+      <name>🛍 Вернисаж – бесплатно</name>
+      <description>Блошиный рынок. Ковры, нарды, антиквариат. Лучше в воскресенье. У пл. Республики.</description>
+      <styleUrl>#activity</styleUrl>
+      <!-- Wikipedia: 40.17667, 44.51722 -->
+      <Point><coordinates>44.5172,40.1767,0</coordinates></Point>
+    </Placemark>
+
+  </Folder>
+
+</Document>
+</kml>

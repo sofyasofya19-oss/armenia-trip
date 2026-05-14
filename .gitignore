@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# IDE
+.cursor/
+.vscode/
+.DS_Store
+
+# Temp / generated
+tmplib/
+artifacts/
+
+# Binary assets
+*.docx
+*.pdf
+
+# Data folders
+brent_infographic/
+labor_productivity_of_the_30_largest_economies/
